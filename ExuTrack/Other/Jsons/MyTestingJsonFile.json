@@ -1,0 +1,23 @@
+[
+    {
+        "exerciseName": "Push Ups",
+        "exerciseImage": "PushUpsImage",
+        "exerciseLevel": "low",
+        "exerciseDescription": "Push-ups are a great bodyweight exercise...",
+        "exerciseId": "IDexercisePushUps"
+    },
+    {
+        "exerciseName": "Squat",
+        "exerciseImage": "SquatImage",
+        "exerciseLevel": "average",
+        "exerciseDescription": "Squat is a compound exercise that...",
+        "exerciseId": "IDexerciseSquat"
+    },
+    {
+        "exerciseName": "Pull ups",
+        "exerciseImage": "PullUpsImage",
+        "exerciseLevel": "average",
+        "exerciseDescription": "Pul ups is a compound exercise that...",
+        "exerciseId": "IDexerciseDeadlift"
+    }
+]
