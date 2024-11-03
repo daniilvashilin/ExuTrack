@@ -3,21 +3,21 @@
         "exerciseName": "Push Ups",
         "exerciseImage": "PushUpsImage",
         "exerciseLevel": "low",
-        "exerciseDescription": "Push-ups are a great bodyweight exercise...",
+        "exerciseDescription": "The push-up is a classic upper-body exercise that primarily targets the chest, shoulders, and triceps, with secondary engagement of the core and lower back. This bodyweight exercise can be done anywhere and requires no equipment. It helps improve upper body strength, core stability, and overall endurance.",
         "exerciseId": "IDexercisePushUps"
     },
     {
         "exerciseName": "Squat",
         "exerciseImage": "SquatImage",
         "exerciseLevel": "average",
-        "exerciseDescription": "Squat is a compound exercise that...",
+        "exerciseDescription": "The squat is a fundamental lower-body exercise that targets the quadriceps, glutes, hamstrings, and core. It helps build strength, stability, and endurance in the legs and lower back. Squats can be performed with just body weight or with added resistance, such as a barbell, dumbbells, or resistance bands. This exercise improves functional mobility and can enhance athletic performance.",
         "exerciseId": "IDexerciseSquat"
     },
     {
         "exerciseName": "Pull ups",
         "exerciseImage": "PullUpsImage",
         "exerciseLevel": "average",
-        "exerciseDescription": "Pul ups is a compound exercise that...",
+        "exerciseDescription": "The pull-up is an advanced upper-body exercise that targets the latissimus dorsi (lats), biceps, and upper back muscles. It’s performed using a pull-up bar and requires bodyweight strength to pull yourself up. This exercise builds pulling power, grip strength, and muscular endurance.",
         "exerciseId": "IDexerciseDeadlift"
     }
 ]

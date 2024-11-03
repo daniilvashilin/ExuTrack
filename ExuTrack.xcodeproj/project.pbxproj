@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		491D35792CD77DCD004A30F8 /* UserProgressModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D35782CD77DCD004A30F8 /* UserProgressModel.swift */; };
+		491D357D2CD791D0004A30F8 /* AddUserExercisesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491D357C2CD791D0004A30F8 /* AddUserExercisesView.swift */; };
 		49BB23DA2CD4F99D00A949E1 /* ExuTrackApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB23D92CD4F99D00A949E1 /* ExuTrackApp.swift */; };
 		49BB23DC2CD4F99D00A949E1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BB23DB2CD4F99D00A949E1 /* ContentView.swift */; };
 		49BB23DE2CD4F99E00A949E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49BB23DD2CD4F99E00A949E1 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		491D35782CD77DCD004A30F8 /* UserProgressModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProgressModel.swift; sourceTree = "<group>"; };
+		491D357C2CD791D0004A30F8 /* AddUserExercisesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddUserExercisesView.swift; sourceTree = "<group>"; };
 		49BB23D62CD4F99D00A949E1 /* ExuTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExuTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49BB23D92CD4F99D00A949E1 /* ExuTrackApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExuTrackApp.swift; sourceTree = "<group>"; };
 		49BB23DB2CD4F99D00A949E1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491D35772CD77DBC004A30F8 /* UserProgress */ = {
+			isa = PBXGroup;
+			children = (
+				491D35782CD77DCD004A30F8 /* UserProgressModel.swift */,
+				491D357C2CD791D0004A30F8 /* AddUserExercisesView.swift */,
+			);
+			path = UserProgress;
+			sourceTree = "<group>";
+		};
 		49BB23CD2CD4F99D00A949E1 = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +119,7 @@
 		49BB23E72CD4F9AC00A949E1 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				491D35772CD77DBC004A30F8 /* UserProgress */,
 				49BB24012CD64F7000A949E1 /* WelcomePages */,
 				49BB23F82CD5325600A949E1 /* TabBar */,
 				49BB23EC2CD4F9E500A949E1 /* ExurciesList */,
@@ -284,9 +298,11 @@
 				49BB23F32CD5105200A949E1 /* ExercisesListView.swift in Sources */,
 				49BB23FA2CD5326000A949E1 /* TabBarView.swift in Sources */,
 				49BB23F52CD51F3100A949E1 /* FilterSearchList.swift in Sources */,
+				491D35792CD77DCD004A30F8 /* UserProgressModel.swift in Sources */,
 				49BB240B2CD6500700A949E1 /* WelcomeScreenView.swift in Sources */,
 				49BB23DC2CD4F99D00A949E1 /* ContentView.swift in Sources */,
 				49BB23DA2CD4F99D00A949E1 /* ExuTrackApp.swift in Sources */,
+				491D357D2CD791D0004A30F8 /* AddUserExercisesView.swift in Sources */,
 				49BB23FE2CD5356300A949E1 /* HomePageView.swift in Sources */,
 				49BB24052CD64F9600A949E1 /* StayFocusedView.swift in Sources */,
 				49BB24102CD65E4D00A949E1 /* SignInAppleIDModel.swift in Sources */,

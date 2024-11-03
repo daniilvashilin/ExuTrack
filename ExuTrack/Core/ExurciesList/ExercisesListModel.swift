@@ -10,6 +10,10 @@ import Foundation
 class ExercisesListModel: ObservableObject {
     
     @Published var exercisesStorage: [ExercisesModel] = []
+ 
+    init() {
+           loadExercises()
+       }
     
     enum difficulty: String, Codable {
         case low

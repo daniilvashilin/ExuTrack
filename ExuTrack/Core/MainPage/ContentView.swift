@@ -1,8 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var userProgressModel: UserProgressModel // Используем EnvironmentObject
+        
     @State var TabBarVm: TabBarModel = .home
-
+        
     var body: some View {
         GeometryReader { geometry in
             VStack(spacing: 0) {
@@ -27,6 +29,7 @@ struct ContentView: View {
                 TabBarView(selecteTab: $TabBarVm)
                     .frame(width: geometry.size.width, height: geometry.size.height)
                     .background(.colorBackground)
+                    .padding(.bottom)
             }
         }
         .background(.colorBackground)
