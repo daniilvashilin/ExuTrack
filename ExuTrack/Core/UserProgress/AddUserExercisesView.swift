@@ -15,7 +15,7 @@ struct AddUserExercisesView: View {
     var shablonWeight: Double
     var shablonImage: String
     var shablonDescript: String
-    @ObservedObject var vm: UserProgressModel
+    @EnvironmentObject var viewModelUser: UserProgressModel
     var body: some View {
         VStack {
             HStack {
@@ -30,9 +30,9 @@ struct AddUserExercisesView: View {
                 .font(.title3)
             
             Button(action: {
-                vm.addUserExercise(id: shablonID, name: shablonName, replays: shablonRep, approaches: shanlonApro, weight: shablonWeight, userExercisesImage: shablonImage)
-                print(vm.userExercisesStorage.count)
-                print(vm.userExercisesStorage)
+                viewModelUser.addUserExercise(id: shablonID, name: shablonName, replays: shablonRep, approaches: shanlonApro, weight: shablonWeight, userExercisesImage: shablonImage)
+                print(viewModelUser.userExercisesStorage.count)
+                print(viewModelUser.userExercisesStorage)
             }, label: {
                 Text("Add")
                     .padding()
@@ -46,5 +46,14 @@ struct AddUserExercisesView: View {
 }
 
 #Preview {
-    AddUserExercisesView(shablonID: "Squat", shablonName: "Squat", shablonRep: 1, shanlonApro: 1, shablonWeight: 1.0, shablonImage: "SquatImage", shablonDescript: "The squat is a fundamental lower-body exercise that targets the quadriceps, glutes, hamstrings, and core. It helps build strength, stability, and endurance in the legs and lower back. Squats can be performed with just body weight or with added resistance, such as a barbell, dumbbells, or resistance bands. This exercise improves functional mobility and can enhance athletic performance.", vm: UserProgressModel())
+    AddUserExercisesView(
+                shablonID: "Squat",
+                shablonName: "Squat",
+                shablonRep: 1,
+                shanlonApro: 1,
+                shablonWeight: 1.0,
+                shablonImage: "SquatImage",
+                shablonDescript: "The squat is a fundamental exercise."
+            )
+            .environmentObject(UserProgressModel())
 }

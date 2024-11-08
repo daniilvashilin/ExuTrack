@@ -10,7 +10,7 @@ import SwiftUI
 @main
 struct ExuTrackApp: App {
     @AppStorage("isDarkMode") private var isDarkMode: Bool = false
-    @StateObject private var userProgressModel = UserProgressModel()
+    @StateObject var userProgressModel = UserProgressModel()
     var body: some Scene {
         WindowGroup {
             ContentView()

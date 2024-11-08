@@ -2,7 +2,15 @@ import Foundation
 
 class UserProgressModel: ObservableObject {
     
-    @Published var userExercisesStorage: [UserExercises] = []
+    @Published var userExercisesStorage: [UserExercises] = [] {
+        didSet {
+            print("Current exercises: \(userExercisesStorage)")
+        }
+    }
+    
+    init() {
+        print("UserProgressModel initialized")
+    }
     
     struct UserExercises: Identifiable {
         var id: String

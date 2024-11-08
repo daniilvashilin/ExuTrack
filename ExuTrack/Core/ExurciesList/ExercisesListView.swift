@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ExercisesListView: View {
     @StateObject var viewModel = ExercisesListModel()
-    @StateObject private var userProgressModel = UserProgressModel()
+    @EnvironmentObject var viewModelUser: UserProgressModel
     @State private var searchText = ""
     @State var isPresentSheet = false
     @State private var selectedExercise: ExercisesListModel.ExercisesModel?
@@ -50,7 +50,7 @@ struct ExercisesListView: View {
                 .onAppear(perform: viewModel.loadExercises)
                 .sheet(isPresented: $isPresentSheet, content: {
                     if let exercise = selectedExercise {
-                        AddUserExercisesView(shablonID: exercise.exerciseId, shablonName: exercise.exerciseName, shablonRep: rep, shanlonApro: approach, shablonWeight: weights, shablonImage: exercise.exerciseImage, shablonDescript: exercise.exerciseDescription, vm: userProgressModel)
+                        AddUserExercisesView(shablonID: exercise.exerciseId, shablonName: exercise.exerciseName, shablonRep: rep, shanlonApro: approach, shablonWeight: weights, shablonImage: exercise.exerciseImage, shablonDescript: exercise.exerciseDescription, viewModelUser: _viewModelUser)
                     }
                 })
             }
