@@ -50,7 +50,7 @@ struct ExercisesListView: View {
                 .onAppear(perform: viewModel.loadExercises)
                 .sheet(isPresented: $isPresentSheet, content: {
                     if let exercise = selectedExercise {
-                        AddUserExercisesView(shablonID: exercise.exerciseId, shablonName: exercise.exerciseName, shablonRep: rep, shanlonApro: approach, shablonWeight: weights, shablonImage: exercise.exerciseImage, shablonDescript: exercise.exerciseDescription, viewModelUser: _viewModelUser)
+                        AddUserExercisesView(shablonID: exercise.exerciseId, shablonName: exercise.exerciseName, shablonImage: exercise.exerciseImage, shablonDescript: exercise.exerciseDescription, viewModelUser: _viewModelUser)
                     }
                 })
             }

@@ -2,40 +2,44 @@ import Foundation
 
 class UserProgressModel: ObservableObject {
     
-    @Published var userExercisesStorage: [UserExercises] = [] {
-        didSet {
-            print("Current exercises: \(userExercisesStorage)")
-        }
-    }
+    @Published var userExercisesStorage: [UserExercises] = []
+    @Published var exerciseHistory: [String: [ExerciseParameters]] = [:]
     
-    init() {
-        print("UserProgressModel initialized")
+    struct ExerciseParameters {
+        var date: Date
+        var weight: Double
+        var repetitions: Int
+        var approaches: Int
     }
     
     struct UserExercises: Identifiable {
         var id: String
         var name: String
-        var replays: Int
-        var approaches: Int
-        var weight: Double
         var userExercisesImage: String
     }
     
-    func addUserExercise(id: String, name: String, replays: Int, approaches: Int, weight: Double, userExercisesImage: String) {
+    func addUserExercise(id: String, name: String, userExercisesImage: String) {
         if userExercisesStorage.contains(where: { $0.id == id }) {
             print("You already have one")
         } else {
             let newExercise = UserExercises(
                 id: id,
                 name: name,
-                replays: replays,
-                approaches: approaches,
-                weight: weight,
                 userExercisesImage: userExercisesImage
             )
             userExercisesStorage.append(newExercise)
-            print("Added exercise: \(newExercise)")
-            print("Current storage count: \(userExercisesStorage.count)")
+        }
+        
+        func addExerciseParameter(for id: String, parameters: ExerciseParameters) {
+            if exerciseHistory[id] != nil {
+                exerciseHistory[id]?.append(parameters)
+            } else {
+                exerciseHistory[id] = [parameters]
+            }
+        }
+        
+        func getExerciseHistory(for id: String) -> [ExerciseParameters] {
+            return exerciseHistory[id] ?? []
         }
     }
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomePageView: View {
     @EnvironmentObject var viewModelUser: UserProgressModel
+    @State var isPresend = false
     var body: some View {
         if viewModelUser.userExercisesStorage.isEmpty {
             Text("List is empty")
@@ -16,7 +17,7 @@ struct HomePageView: View {
             VStack {
                 List(viewModelUser.userExercisesStorage) { exercise in
                     Button {
-                        //
+                        isPresend = true
                     } label: {
                         HStack {
                             Image(exercise.userExercisesImage)
@@ -33,6 +34,9 @@ struct HomePageView: View {
                         }
                     }
                     .listRowBackground(Color.colorBackground)
+                    .sheet(isPresented: $isPresend, content: {
+                        AddParametersToExerciseView()
+                    })
                 }
                 .listRowSpacing(0)
                 .background(Color.clear)
